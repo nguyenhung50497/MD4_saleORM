@@ -1,0 +1,10 @@
+"use strict";
+exports.__esModule = true;
+exports.productRouter = void 0;
+var express_1 = require("express");
+var HomeController_1 = require("../controller/HomeController");
+exports.productRouter = (0, express_1.Router)();
+exports.productRouter.get('/create', HomeController_1["default"].showFormCreate);
+exports.productRouter.post('/create', HomeController_1["default"].createProduct);
+exports.productRouter.get('/edit/:id', HomeController_1["default"].showFormEdit);
+exports.productRouter.post('/edit/:id', HomeController_1["default"].updateProduct);
